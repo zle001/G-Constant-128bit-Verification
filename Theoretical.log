@@ -1,0 +1,37 @@
+
+--- GRAVITATIONAL TIME AXIS ---
+Theoretical G: 6.6727045370724042e-11
+
+[CODATA 1986 (Historic Baseline)]
+  Ref Value   :6.672590000000e-11
+  Theory Val  :6.672704537072e-11
+  Relative Err:0.0017165309%
+  Sigma Dist  :0.1347 sigma
+
+[CODATA 1998 (Intermediate)]
+  Ref Value   :6.673000000000e-11
+  Theory Val  :6.672704537072e-11
+  Relative Err:0.0044277376%
+  Sigma Dist  :0.0295 sigma
+
+[CODATA 2022 (Current/Polarized)]
+  Ref Value   :6.674300000000e-11
+  Theory Val  :6.672704537072e-11
+  Relative Err:0.0239045732%
+  Sigma Dist  :10.6364 sigma
+
+[Fine-Structure Constant (1/alpha)]
+  Ref Value   :1.370359991770e+02
+  Theory Val  :1.370704921345e+02
+  Relative Err:0.0251707272%
+  Sigma Dist  :1642521.7880 sigma
+
+[Planck Constant h Verification]
+  Ref h (2022) :6.6260701499999998e-34
+  Theoretical h:6.6260668719118078e-34
+  Relative Err :0.0000494726 %
+
+[Polarized Group - Vacuum Screened]
+  G Systematic Drift    :0.02390457%
+  Alpha Systematic Drift:0.02517073%
+  Synchronization Gap   :0.00126615%
