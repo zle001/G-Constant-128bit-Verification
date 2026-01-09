@@ -12,7 +12,7 @@ coder@software{zhang2026geometric,
   year         = {2026},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.18144335},
-  url          = {https://github.com/zle001/G-Constant-128bit-Verification}
+  url          = { https://github.com/zle001/G-Constant-128bit-Verification }
 }
 📄 LicenseThis project is licensed under the MIT License - see the LICENSE file for details.
 
