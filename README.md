@@ -1,4 +1,4 @@
-﻿[![DOI](https://zenodo.org/records/18144335)](https://doi.org/10.5281/zenodo.18144335)
+﻿[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18144335.svg)](https://doi.org/10.5281/zenodo.18144335)
 
 Computational Verification Framework: Geometric Field Theory Axioms
 
