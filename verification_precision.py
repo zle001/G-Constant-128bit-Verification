@@ -4,6 +4,7 @@ PROJECT: Geometric Field Theory - Axiomatic Structure and Closure
 FILE: verification_precision.py
 AUTHOR: Le Zhang (Independent Researcher)
 DATE: January 2026
+Verification based on Theory DOI: 10.5281/zenodo.18144335
 
 DESCRIPTION:
 This program performs a High-Precision Numerical Verification (128-bit/Double-Double)
@@ -39,7 +40,7 @@ def setup_precision():
     getcontext().Emin = -999999
 
 def dd_exp(x: Decimal) -> Decimal:
-    """Compute high-precision exponential using Taylor series (same as C++ implementation)"""
+    """Compute high-precision exponential using Taylor series"""
     sum_val = Decimal(1)
     term = Decimal(1)
     # C++ uses 30-term expansion
@@ -55,7 +56,8 @@ def calculate_theoretical_values():
     c3 = c * c * c
     c4 = c * c * c * c
     
-    # High-precision π (equivalent to C++'s dd_real(3.141592653589793, 1.2246467991473532e-16))
+    # High-precision π
+    # (equivalent to C++'s dd_real(3.141592653589793, 1.2246467991473532e-16))
     PI = Decimal("3.1415926535897932384626433832795028841971693993751")
     
     # Compute intermediate terms (identical to C++)

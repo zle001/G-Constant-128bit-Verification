@@ -3,6 +3,7 @@
  * FILE: verification_precision.cpp
  * AUTHOR: Le Zhang (Independent Researcher)
  * DATE: January 2026
+ * Verification based on Theory DOI: 10.5281/zenodo.18144335
  *
  * DESCRIPTION:
  * This program performs a High-Precision Numerical Verification
