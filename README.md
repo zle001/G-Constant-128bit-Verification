@@ -12,4 +12,4 @@ To cite this work, please use the Zenodo DOI: [10.5281/zenodo.18144335](https://
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Maintained by Le Zhang (Independent Researcher).
+Maintained by Le Zhang (Independent Researcher, zle001@gmail.com).
