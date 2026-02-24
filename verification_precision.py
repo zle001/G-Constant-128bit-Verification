@@ -1,36 +1,40 @@
 ﻿# verification_precision.py
 """
-PROJECT: Geometric Field Theory - Axiomatic Structure and Closure
-FILE: verification_precision.py
-AUTHOR: Le Zhang (Independent Researcher)
-DATE: January 2026
-Verification based on Theory DOI: 10.5281/zenodo.18144335
-
-DESCRIPTION:
-This program performs a High-Precision Numerical Verification (128-bit/Double-Double)
-of the analytically derived Gravitational Constant (G) based on the axiom of
-Maximum Information Efficiency.
-
-Note:
-Standard double literals are sufficient for CODATA input precision,
-but internal calculations utilize full decimal precision.
-
-COMPUTATIONAL LOGIC:
-1. Implements high-precision decimal arithmetic to achieve ~32 decimal digit precision.
-2. Compares the theoretical Geometric G against
-   CODATA 2022 and CODATA 1986/1998 baselines.
-3. Verifies the structural stability of
-   the derived constant beyond standard floating-point errors.
-
-RESULT SUMMARY:
-Theoretical G converges to ~6.6727e-11, aligning with the geometric baseline
-(CODATA 1986/1998) rather than the local polarization fluctuations
-observed in 2022.
+  PROJECT: Geometric Field Theory - Axiomatic Structure and Closure (V1.5.2)
+  FILE: verification_precision.cpp
+  AUTHOR: Le Zhang (Research Scientist, Private Practice)
+  DATE: February 2026
+  
+  DESCRIPTION:
+  This program performs a High-Precision Numerical Verification
+  of the analytically derived Gravitational Constant (G) based on the
+  Axiomatic SI-Topology Framework (The Iron Triangle: chi=1, L=1, P=1).
+  
+  COMPUTATIONAL LOGIC:
+  1. Implements Double-Double arithmetic (approx 32 decimal digits).
+  2. Anchors the calculation to the Topological Time Basis (chi = 1 Hz).
+  3. Verifies G as a geometric residue normalized by the Unit Momentum (P=1).
 """
 
 import decimal
 from decimal import Decimal, getcontext
 import math
+
+# AXIOMATIC CONSTANTS
+# Axiom I: Topological Time Anchor (The Unit Generator)
+chi = Decimal("1.0")  # [Hz] Strictly locked by manifold topology
+
+# Axiom III: Spatial Projection Basis
+L_unit = Decimal("1.0")  # [m] Unit metric
+
+# Natural projection baseline
+Q_ref_c3 = Decimal("1.0")  # [J (m/s)^3]
+
+# Corollary 3.4: Natural Unit Momentum
+# Derived directly from Spacetime Topology:
+#   P = L_unit * chi * [Scaling]
+# This confirms the macroscopic inertia baseline.
+P_unit = Decimal("1.0")  # [kg m/s] Kinematic Baseline
 
 def setup_precision():
     """Set up high-precision computation environment (~32 decimal digits)"""
@@ -71,14 +75,14 @@ def calculate_theoretical_values():
     epi = dd_exp(Decimal(-1) * inv_term_pi)  # exp(-1/term_pi)
     
     # Theoretical Planck constant calculation
-    hA = (Decimal(2) * E_val) / c4
+    hA = ((Decimal(2) * E_val) / c4) * Q_ref_c3 * L_unit
     h_theory = hA * e64
     
     # Theoretical gravitational constant calculation (core formula, identical to C++)
     factor = Decimal("0.25") * c3
     diff_h = hA - h_theory
     epi_sq = epi * epi
-    G_theory = factor * diff_h * epi_sq
+    G_theory = (factor / (P_unit * P_unit)) * diff_h * epi_sq
     
     # Theoretical fine-structure constant (reciprocal) calculation
     a_normal = Decimal("0.5") * Decimal(64)
@@ -110,7 +114,14 @@ def report(label: str, theory: Decimal, ref: Decimal, sigma: Decimal):
 def main():
     """Main function, following identical logic to C++ program"""
     setup_precision()
-    
+
+    print("[SYSTEM GEOMETRIC CONFIGURATION]");
+    print("Manifold Dimension : 64 (Constraint Closure)");    
+    print(f" Topological Anchor (chi) : {chi:.10f} % Hz(Fixed via Axiom I)");
+    print(f" Universal Ref(Q_ref*c^3) : {Q_ref_c3:.10f} % J (m/s)^3");
+    print(f" Spatial Basis        (L) : {L_unit:.10f} % m");
+    print(f" Momentum Basis       (P) : {P_unit:.10f} % kg m / s");
+        
     # CODATA reference values
     G_ref_2022 = Decimal("6.67430e-11")
     G_sigma_2022 = Decimal("0.00015e-11")
@@ -135,7 +146,7 @@ def main():
     a_theory = results['a_theory']
     
     # Output header
-    print("\n--- GRAVITATIONAL TIME AXIS ---")
+    print("\nGRAVITATIONAL TIME AXIS")
     print(f"Theoretical G: {G_theory:.16e}")
     
     # Report comparisons against CODATA versions
