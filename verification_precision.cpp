@@ -78,30 +78,29 @@ dd_real dd_exp(dd_real x) {
 int main() {
     // AXIOMATIC CONSTANTS
     // Axiom I: Topological Time Anchor (The Unit Generator)
-    const dd_real chi = 1.0; // [Hz] Strictly locked by manifold topology
+    const dd_real chi_ref = 1.0; // [Hz] Strictly locked by manifold topology
 
     // Axiom III: Spatial Projection Basis
-    const dd_real L_unit = 1.0; // [m] Unit metric
+    const dd_real L_ref = 1.0; // [m] Unit metric
 
-    // Natural projection baseline
-    const dd_real Q_ref_c3 = 1.0; // [J (m/s)^3]
+    // Geometric Dimensional Intensity Flux (GDIF)
+    const dd_real I_ref = 1.0; // [J (m/s)^3]
 
-    // Corollary 3.4: Natural Unit Momentum
     // Derived directly from Spacetime Topology:
-    //   P = L_unit * chi * [Scaling]
+    //   P = L_ref * chi_ref * [Scaling]
     // This confirms the macroscopic inertia baseline.
-    const dd_real P_unit = 1.0; // [kg m/s] Kinematic Baseline
+    const dd_real P_ref = 1.0; // [kg m/s] Kinematic Baseline
 
     std::cout << "[SYSTEM GEOMETRIC CONFIGURATION]" << std::endl;
     std::cout << "Manifold Dimension : 64 (Constraint Closure)" << std::endl;
     std::cout << std::fixed << std::setprecision(10);
-    std::cout << "Topological Anchor (chi) : " << chi.hi;
+    std::cout << "Topological Anchor (chi) : " << chi_ref.hi;
     std::cout << " Hz(Fixed via Axiom I)" << std::endl;
-    std::cout << "Universal Ref(Q_ref*c^3) : " << Q_ref_c3.hi;
+    std::cout << "GDIF                 (I) : " << I_ref.hi;
     std::cout << " J (m/s)^3" << std::endl;
-    std::cout << "Spatial Basis        (L) : " << L_unit.hi;
+    std::cout << "Spatial Basis        (L) : " << L_ref.hi;
     std::cout << " m" << std::endl;
-    std::cout << "Momentum Basis       (P) : " << P_unit.hi;
+    std::cout << "Momentum Basis       (P) : " << P_ref.hi;
     std::cout << " kg m / s(Derived)" << std::endl;
 
     // CODATA 2022
@@ -126,7 +125,8 @@ int main() {
     dd_real c = 299792458.0;
     dd_real c3 = c * c * c;
     dd_real c4 = c * c * c * c;
-    // PI = 3.14159265358979323846... 
+    // Hi component:  3.141592653589793116...
+    // Lo component:  1.224646799147353207...e-16
     dd_real PI = dd_real(3.141592653589793, 1.2246467991473532e-16);
 
     dd_real PI_sq = PI * PI;
@@ -140,14 +140,14 @@ int main() {
     // Ideal Planck Constant (h_A) from Axiom II
     // h_A = 2e / c^4 * (Q_ref_c3 * L_unit =1)
     // Actually h_A definition involves scaling. 
-    dd_real hA = ((dd_real(2.0) * E_val) / c4) * Q_ref_c3 * L_unit;
+    dd_real hA = ((dd_real(2.0) * E_val) / c4) * I_ref * L_ref;
     dd_real h_theory = hA * e64;
 
     // G depends on the RESIDUE (h_A - h_theory).
     dd_real factor = c3 / dd_real(4.0);
-    dd_real diff_q = (hA - h_theory) * chi;
+    dd_real diff_q = (hA - h_theory) * chi_ref;
     dd_real epi_sq = epi * epi;
-    dd_real G_theory = (factor / (P_unit * P_unit)) * diff_q * epi_sq;
+    dd_real G_theory = (factor / (P_ref * P_ref)) * diff_q * epi_sq;
 
     dd_real a_normal = dd_real(0.5) * dd_real(64.0);
     dd_real a_space = a_normal * PI * dd_real(4.0) / dd_real(3.0);
@@ -224,4 +224,3 @@ int main() {
     std::cin.get();
     return 0;
 }
-

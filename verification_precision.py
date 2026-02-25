@@ -22,19 +22,18 @@ import math
 
 # AXIOMATIC CONSTANTS
 # Axiom I: Topological Time Anchor (The Unit Generator)
-chi = Decimal("1.0")  # [Hz] Strictly locked by manifold topology
+chi_ref = Decimal("1.0")  # [Hz] Strictly locked by manifold topology
 
 # Axiom III: Spatial Projection Basis
-L_unit = Decimal("1.0")  # [m] Unit metric
+L_ref = Decimal("1.0")  # [m] Unit metric
 
-# Natural projection baseline
-Q_ref_c3 = Decimal("1.0")  # [J (m/s)^3]
+# Geometric Dimensional Intensity Flux (GDIF)
+I_ref = Decimal("1.0")  # [J (m/s)^3]
 
-# Corollary 3.4: Natural Unit Momentum
 # Derived directly from Spacetime Topology:
-#   P = L_unit * chi * [Scaling]
+#   P = L_ref * chi_ref * [Scaling]
 # This confirms the macroscopic inertia baseline.
-P_unit = Decimal("1.0")  # [kg m/s] Kinematic Baseline
+P_ref = Decimal("1.0")  # [kg m/s] Kinematic Baseline
 
 def setup_precision():
     """Set up high-precision computation environment (~32 decimal digits)"""
@@ -75,14 +74,14 @@ def calculate_theoretical_values():
     epi = dd_exp(Decimal(-1) * inv_term_pi)  # exp(-1/term_pi)
     
     # Theoretical Planck constant calculation
-    hA = ((Decimal(2) * E_val) / c4) * Q_ref_c3 * L_unit
+    hA = ((Decimal(2) * E_val) / c4) * I_ref * L_ref
     h_theory = hA * e64
     
     # Theoretical gravitational constant calculation (core formula, identical to C++)
     factor = Decimal("0.25") * c3
     diff_h = hA - h_theory
     epi_sq = epi * epi
-    G_theory = (factor / (P_unit * P_unit)) * diff_h * epi_sq
+    G_theory = (factor / (P_ref * P_ref)) * diff_h * epi_sq
     
     # Theoretical fine-structure constant (reciprocal) calculation
     a_normal = Decimal("0.5") * Decimal(64)
@@ -117,10 +116,10 @@ def main():
 
     print("[SYSTEM GEOMETRIC CONFIGURATION]");
     print("Manifold Dimension : 64 (Constraint Closure)");    
-    print(f" Topological Anchor (chi) : {chi:.10f} % Hz(Fixed via Axiom I)");
-    print(f" Universal Ref(Q_ref*c^3) : {Q_ref_c3:.10f} % J (m/s)^3");
-    print(f" Spatial Basis        (L) : {L_unit:.10f} % m");
-    print(f" Momentum Basis       (P) : {P_unit:.10f} % kg m / s");
+    print(f" Topological Anchor (chi) : {chi_ref:.10f} % Hz(Fixed via Axiom I)");
+    print(f" GDIF                 (I) : {I_ref:.10f} % J (m/s)^3");
+    print(f" Spatial Basis        (L) : {L_ref:.10f} % m");
+    print(f" Momentum Basis       (P) : {P_ref:.10f} % kg m / s");
         
     # CODATA reference values
     G_ref_2022 = Decimal("6.67430e-11")

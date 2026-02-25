@@ -1,7 +1,7 @@
 [SYSTEM GEOMETRIC CONFIGURATION]
 Manifold Dimension : 64 (Constraint Closure)
  Topological Anchor (chi) : 1.0000000000 % Hz(Fixed via Axiom I)
- Universal Ref(Q_ref*c^3) : 1.0000000000 % J (m/s)^3
+ GDIF                 (I) : 1.0000000000 % J (m/s)^3
  Spatial Basis        (L) : 1.0000000000 % m
  Momentum Basis       (P) : 1.0000000000 % kg m / s
 

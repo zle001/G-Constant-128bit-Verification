@@ -6,14 +6,6 @@ Theoretical BackgroundThis code validates the axioms proposed in Geometric Field
 
 Repository Title:
 
-G-Derivation-Kernel: 
-
-Exact Calculation of Gravitational Constant via SI-Topological Anchors (V1.5.2)
-
-Description:
-
-This is the computational kernel for the Axiomatic Geometric Field Theory (V1.5.2).
-
 It performs a high-precision verification of the Gravitational Constant ($G$) based on a fully closed, parameter-free geometric topology.
 
 Key Features:
