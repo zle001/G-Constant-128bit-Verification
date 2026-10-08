@@ -6,7 +6,7 @@
 
 This code validates the axioms proposed in *Geometric Field Theory*, which posits that fundamental constants are not arbitrary parameters but geometric projections of the spacetime manifold under 64-dimensional symmetry constraints. 
 
-It performs a high-precision verification of the Gravitational Constant ($G$) based on a fully closed, parameter-free geometric topology.
+It performs a high-precision verification of the Gravitational Constant (G) based on a fully closed, parameter-free geometric topology.
 
 ### Key Features
 * **No Empirical Fitting:** $G$ is derived strictly from the speed of light, the Planck constant residue, and geometric topology.
@@ -28,6 +28,7 @@ This code serves as the executable proof of the theory. The full theoretical man
 * **Title:** Geometric Field Theory: Axiomatic Structure and Closure (Version 1.5.2)
 * **Author:** Le Zhang
 * **ISBN:** 979-8-9952779-0-3
+* **U.S. Copyright Registration:** TX 9-641-922 (Effective March 11, 2026)
 * **Publisher:** Z. Philosophia
 * **Imprint:** Z. Philosophia Naturalis
 * **Publication Date:** March 11, 2026
@@ -49,6 +50,10 @@ To verify the cryptographic proof, timestamps, and authorship of this work witho
    The digital certificates in the `/proof` directory contain qualified electronic timestamps compliant with the European Union eIDAS regulation (issued by Firmaprofesional SA, an EU Qualified Trust Service Provider). 
    You can independently verify the legal validity of these PDF signatures by uploading them to the:
    [European Commission Electronic Signature Verification Tool](https://ec.europa.eu/digital-building-blocks/DSS/webapp-demo/validation)
+
+3. **U.S. Statutory Copyright Registration:**
+   Officially registered with the United States Copyright Office under Registration Number **`TX 9-641-922`** (Effective Date: March 11, 2026).  
+   Public record can be verified via the [U.S. Copyright Public Records Portal](https://public-records.copyright.gov) or the [Library of Congress Copyright Catalog](https://cocatalog.loc.gov) by searching registration number `TX0009641922`.
 
 ---
 
