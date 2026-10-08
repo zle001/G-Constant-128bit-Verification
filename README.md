@@ -53,7 +53,7 @@ To verify the cryptographic proof, timestamps, and authorship of this work witho
 
 3. **U.S. Statutory Copyright Registration:**
    Officially registered with the United States Copyright Office under Registration Number **`TX 9-641-922`** (Effective Date: March 11, 2026).  
-   Public record can be verified via the [U.S. Copyright Public Records Portal](https://public-records.copyright.gov) or the [Library of Congress Copyright Catalog](https://cocatalog.loc.gov) by searching registration number `TX0009641922`.
+   Public record can be verified via the [U.S. Copyright Public Records Portal](https://publicrecords.copyright.gov) or the [Library of Congress Copyright Catalog](https://cocatalog.loc.gov) by searching registration number `TX0009641922`.
 
 ---
 
